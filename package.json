@@ -6,9 +6,11 @@
   "author": "K",
   "license": "MIT",
   "scripts": {
-    "debug": "node local-server/server.js"
+    "debug": "node local-server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "config": "^2.0.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
   }
 }
