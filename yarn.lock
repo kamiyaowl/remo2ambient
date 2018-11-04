@@ -20,6 +20,13 @@ ajv@^5.3.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
+ambient-lib@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/ambient-lib/-/ambient-lib-0.1.5.tgz#a56c1095a4488c43645e69a7615cab97ac15a639"
+  integrity sha1-pWwQlaRIjENkXmmnYVyrl6wVpjk=
+  dependencies:
+    request "^2.73.0"
+
 array-flatten@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
@@ -499,7 +506,7 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-request@^2.88.0:
+request@^2.73.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
