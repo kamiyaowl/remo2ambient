@@ -20,7 +20,7 @@ exports.update = (event, callback) => {
             return;
         }
         // prepare data        
-        const send_arr = [];
+        const send_data = {};
         const datas = JSON.parse(body);
         if (datas.length < REMO_DEVICE_ID) {
             console.error('datas.length < REMO_DEVICE_ID');
@@ -41,22 +41,23 @@ exports.update = (event, callback) => {
         const hu = newest_events.hu;
         const il = newest_events.il;
         if (te) {
-            send_arr.push({created: te.created_at, d1: te.val});
+           send_data.d1 = te.val;
         }
         if (hu) {
-            send_arr.push({created: hu.created_at, d2: hu.val});
+            send_data.d2 = hu.val;
         }
         if (il) {
-            send_arr.push({created: il.created_at, d3: il.val});
+            send_data.d3 = il.val;
         }
         // send to ambient
         ambient.connect(AMBIENT_CHANNEL_ID, AMBIENT_WRITE_KEY);
-        ambient.send(send_arr, (err2, res2, body2) => {
+        ambient.send(send_data, (err2, res2, body2) => {
             if (err2 || res2.statusCode != 200) {
                 console.error(`Ambient API Error err:${err2}, res:${res2}`);
                 callback();
                 return;
             }
+            console.log(`[Send] ${JSON.stringify(send_data)}`);
             callback();
         });
     });
