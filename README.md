@@ -6,7 +6,7 @@ Google Cloud Functions + Cloud Schedulerを組み合わせて使う前提で設�
 
 # 設定
 
-`config/xxx.json`か環境変数でイカの値を設定することで実行できます。
+`config/xxx.json`か環境変数で以下の値を設定することで実行できます。
 
 `xxx.json`は`NODE_ENV`によって変化する。
 
