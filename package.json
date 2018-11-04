@@ -1,0 +1,14 @@
+{
+  "name": "remo2ambient",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kamiyaowl/remo2ambient.git",
+  "author": "K",
+  "license": "MIT",
+  "scripts": {
+    "debug": "node local-server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
